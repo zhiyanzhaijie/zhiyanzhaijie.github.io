@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>脂砚斋介 · 简历</title>
+  <meta name="author" content="候选人">
+  <meta name="description"
+    content="4年 web 全栈经验，AI Agent 前端负责人，主栈 TS/Next/React/Angular/Vue，兼具 Rust/Dioxus/Axum/Tauri 实践。">
+  <meta name="keywords"
+    content="web全栈, 前端负责人, Next.js, React, Angular, Vue, Rust, Dioxus, Tauri, PayloadCMS, .NET Core">
+  <meta name="generator" content="Kami">
+  <style>
+    /* W04 / regular face for body text */
+    @font-face {
+      font-family: "TsangerJinKai02";
+      src: url("../fonts/TsangerJinKai02-W04.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W04.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* W05 / medium face for headings (no synthetic bold) */
+    @font-face {
+      font-family: "TsangerJinKai02";
+      src: url("../fonts/TsangerJinKai02-W05.ttf") format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W05.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @page {
+      size: A4;
+      margin: 11mm 13mm 11mm 13mm;
+      background: #f5f4ed;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --parchment: #f5f4ed;
+      --ivory: #faf9f5;
+      --border: #e8e6dc;
+      --border-soft: #e5e3d8;
+      --near-black: #141413;
+      --dark-warm: #3d3d3a;
+      --olive: #504e49;
+      --stone: #6b6a64;
+      --brand: #1B365D;
+      --brand-tint: #EEF2F7;
+      /* solid equivalent of rgba(1B365D, 0.08), avoids tag double-rectangle bug */
+      --serif: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", Georgia, serif;
+      --sans: var(--serif);
+    }
+
+    html,
+    body {
+      background: var(--parchment);
+    }
+
+    @media screen {
+      body {
+        max-width: 210mm;
+        margin: 0 auto;
+        padding: 11mm 13mm;
+      }
+    }
+
+    body {
+      color: var(--near-black);
+      font-family: var(--serif);
+      font-size: 9.2pt;
+      line-height: 1.42;
+      letter-spacing: 0.3pt;
+      widows: 3;
+      orphans: 3;
+    }
+
+    .serif {
+      font-family: var(--serif);
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 4.2mm;
+      padding-bottom: 2.3mm;
+      border-bottom: 0.6pt solid var(--border);
+    }
+
+    .header>div:first-child {
+      flex-shrink: 0;
+    }
+
+    .name {
+      font-family: var(--serif);
+      font-size: 26.5pt;
+      font-weight: 500;
+      letter-spacing: 0.5pt;
+      color: var(--near-black);
+      line-height: 1;
+      margin-bottom: 0;
+      display: flex;
+      align-items: baseline;
+      gap: 2.2mm;
+      white-space: nowrap;
+    }
+
+    .alias {
+      font-size: 12.5pt;
+      font-weight: 400;
+      color: var(--stone);
+      letter-spacing: 0.2pt;
+    }
+
+    .alias::before {
+      content: "";
+    }
+
+    .tagline {
+      font-size: 9.5pt;
+      color: var(--olive);
+      line-height: 1.3;
+    }
+
+    .tagline .accent {
+      color: var(--brand);
+      font-weight: 500;
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 9pt;
+      color: var(--stone);
+      line-height: 1.5;
+      margin-bottom: -0.5mm;
+    }
+
+    .contact a {
+      color: var(--dark-warm);
+    }
+
+    .contact .loc {
+      color: var(--olive);
+      font-weight: 500;
+    }
+
+    .contact .role {
+      color: var(--brand);
+      font-size: 10.5pt;
+      font-weight: 500;
+    }
+
+    .contact .sep {
+      color: var(--border);
+      margin: 0 0.4em;
+    }
+
+    /* METRICS */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 6mm;
+      margin-bottom: 3mm;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .metric {
+      background: transparent;
+      padding: 1mm 0 1.2mm;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.7mm;
+      min-width: 0;
+      break-inside: avoid;
+    }
+
+    .metric-value {
+      font-family: var(--serif);
+      font-size: 13pt;
+      font-weight: 500;
+      color: var(--brand);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .metric-label {
+      font-size: 9pt;
+      color: var(--olive);
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .metric-value .unit {
+      font-size: 10.5pt;
+      margin-left: 0.3mm;
+      font-weight: 500;
+      color: var(--brand);
+    }
+
+    .metrics--stack .metric {
+      gap: 0.5mm;
+      padding-bottom: 2mm;
+      border-bottom: 0.3pt dotted var(--border);
+    }
+
+    /* SECTION */
+    .section-title {
+      font-family: var(--serif);
+      font-size: 12.5pt;
+      font-weight: 500;
+      color: var(--near-black);
+      border-bottom: 0.5pt solid var(--border);
+      padding: 0 0 1mm 0;
+      margin: 5.8mm 0 1.7mm 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 2mm;
+    }
+
+    .section-title .sub {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 9pt;
+      color: var(--stone);
+      letter-spacing: 0.3pt;
+    }
+
+    section:first-of-type .section-title {
+      margin-top: 0;
+    }
+
+    .page-break>.section-title {
+      margin-top: 0;
+    }
+
+    /* Unify gap from section-title bottom border to first content's first line = 3mm
+     (section-title margin-bottom 1.8mm + first-child top spacing 1.2mm) */
+    .section-title+.skill-row {
+      padding-top: 1.2mm;
+    }
+
+    .section-title+.edu-row {
+      padding-top: 1.2mm;
+    }
+
+    /* SUMMARY */
+    .summary {
+      font-size: 9.2pt;
+      line-height: 1.42;
+      color: var(--near-black);
+    }
+
+    .summary .em-brand {
+      color: var(--brand);
+    }
+
+    .summary .hl {
+      color: var(--brand);
+    }
+
+    /* TIMELINE */
+    .timeline {
+      display: flex;
+      gap: 6mm;
+      margin-bottom: 2mm;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .tl-step {
+      flex: 1;
+      background: transparent;
+      padding: 0.8mm 0;
+      break-inside: avoid;
+    }
+
+    .tl-top {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5mm;
+      margin-bottom: 0.5mm;
+    }
+
+    .tl-year {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-weight: 500;
+      color: var(--brand);
+      line-height: 1;
+    }
+
+    .tl-head {
+      font-size: 11pt;
+      font-weight: 500;
+      color: var(--near-black);
+    }
+
+    .tl-body {
+      font-size: 9pt;
+      color: var(--olive);
+      line-height: 1.40;
+      letter-spacing: 0.3pt;
+    }
+
+    /* PROJECTS */
+    .project {
+      padding: 2.6mm 0;
+      break-inside: avoid;
+    }
+
+    .project:first-of-type {
+      padding-top: 1.2mm;
+    }
+
+    .proj-head {
+      display: block;
+      margin-bottom: 0.75mm;
+    }
+
+    .proj-name {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-weight: 500;
+      color: var(--near-black);
+    }
+
+    .proj-kind {
+      font-size: 11pt;
+      color: var(--olive);
+      margin-left: 1.5mm;
+    }
+
+    .proj-role {
+      font-size: 9pt;
+      color: var(--brand);
+      font-weight: 500;
+      float: right;
+      background: #EEF2F7;
+      padding: 0.4mm 1.2mm;
+      border-radius: 2pt;
+      letter-spacing: 0.05pt;
+      white-space: nowrap;
+    }
+
+    .proj-lines {
+      display: table;
+      width: 100%;
+    }
+
+    .proj-row {
+      display: table-row;
+    }
+
+    .proj-label {
+      display: table-cell;
+      width: 11mm;
+      font-size: 9pt;
+      color: var(--brand);
+      font-weight: 500;
+      letter-spacing: 0.2pt;
+      padding: 0.2mm 0 0.4mm 0;
+      vertical-align: top;
+    }
+
+    .proj-text {
+      display: table-cell;
+      font-size: 9pt;
+      color: var(--near-black);
+      line-height: 1.40;
+      letter-spacing: 0.3pt;
+      padding: 0 0 0.4mm 0.5mm;
+    }
+
+    .proj-text .hl {
+      color: var(--brand);
+    }
+
+    .team-culture {
+      margin-top: 2mm;
+      padding: 1.5mm 2.5mm;
+      background: var(--brand-tint);
+      border-radius: 2pt;
+      font-size: 9pt;
+      color: var(--olive);
+      line-height: 1.40;
+      break-inside: avoid;
+    }
+
+    .team-culture .hl {
+      color: var(--brand);
+    }
+
+    /* PAGE 2 FORCE BREAK */
+    .page-break {
+      break-before: page;
+    }
+
+    /* OPEN SOURCE - NEW ENHANCED LAYOUT */
+    .os-intro {
+      font-size: 9.2pt;
+      line-height: 1.40;
+      letter-spacing: 0.3pt;
+      color: var(--near-black);
+      padding: 0;
+      margin: 1.2mm 0 2mm 0;
+      background: transparent;
+      break-inside: avoid;
+    }
+
+    .os-intro .hl {
+      color: var(--brand);
+    }
+
+    .os-intro .strong {
+      color: var(--near-black);
+    }
+
+    .os-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 8mm;
+      row-gap: 1mm;
+    }
+
+    .os-item {
+      display: flex;
+      align-items: baseline;
+      gap: 2mm;
+      padding: 1mm 0 1mm 0;
+      border-bottom: 0.3pt dotted var(--border);
+      break-inside: avoid;
+    }
+
+    .os-item:last-child,
+    .os-item:nth-last-child(2):nth-child(odd) {
+      border-bottom: none;
+    }
+
+    .os-name {
+      font-family: var(--serif);
+      font-size: 10pt;
+      font-weight: 500;
+      flex-shrink: 0;
+      min-width: 14mm;
+    }
+
+    .os-name a {
+      color: var(--brand);
+    }
+
+    .os-desc {
+      font-size: 9pt;
+      color: var(--olive);
+      line-height: 1.40;
+      flex: 1;
+    }
+
+    .os-star {
+      font-size: 9pt;
+      color: var(--dark-warm);
+      font-weight: 500;
+      white-space: nowrap;
+      flex-shrink: 0;
+      min-width: 7.5mm;
+      text-align: right;
+    }
+
+    .os-star.big {
+      color: var(--brand);
+      font-size: 9.2pt;
+    }
+
+    .os-highlight {
+      margin-top: 2.5mm;
+      padding: 1.8mm 2.8mm;
+      background: var(--brand-tint);
+      border-radius: 2pt;
+      font-size: 9pt;
+      line-height: 1.40;
+      color: var(--near-black);
+      letter-spacing: 0.3pt;
+      break-inside: avoid;
+    }
+
+    .os-highlight .hl {
+      color: var(--brand);
+    }
+
+    .os-highlight .tag {
+      display: inline-block;
+      background: var(--brand);
+      color: var(--ivory);
+      font-size: 9pt;
+      font-weight: 500;
+      padding: 0.2mm 1.5mm;
+      border-radius: 2pt;
+      margin-right: 1.2mm;
+      letter-spacing: 0.2pt;
+      transform: translateY(-0.2mm);
+    }
+
+    /* AI CONVICTION - NEW SECTION */
+    .convictions {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2.5mm;
+      margin-top: 1.2mm;
+    }
+
+    .conv-card {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0 2mm 0 0;
+      break-inside: avoid;
+    }
+
+    .conv-head,
+    .ai-card-head {
+      font-family: var(--serif);
+      font-size: 9.8pt;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 0.9mm;
+      display: flex;
+      align-items: baseline;
+      gap: 1.5mm;
+    }
+
+    .conv-head .year,
+    .ai-card-head .year {
+      color: var(--brand);
+      font-weight: 500;
+      font-size: 9pt;
+    }
+
+    .conv-body,
+    .ai-card-body {
+      font-size: 9pt;
+      color: var(--olive);
+      line-height: 1.40;
+      letter-spacing: 0.3pt;
+    }
+
+    .conv-body .hl,
+    .ai-card-body .hl {
+      color: var(--brand);
+    }
+
+    .conv-body .em-brand,
+    .ai-card-body .em-brand {
+      color: var(--brand);
+    }
+
+    /* INFLUENCE */
+    .handle-strip {
+      background: transparent;
+      padding: 0;
+      margin: 1.2mm 0 2mm 0;
+      display: flex;
+      align-items: baseline;
+      gap: 3mm;
+      break-inside: avoid;
+    }
+
+    .handle-strip .handle {
+      font-family: var(--serif);
+      font-size: 9.8pt;
+      font-weight: 500;
+      color: var(--brand);
+      flex-shrink: 0;
+    }
+
+    .handle-strip .follower {
+      font-size: 9pt;
+      color: var(--stone);
+      flex-shrink: 0;
+    }
+
+    .handle-strip .desc {
+      font-size: 9pt;
+      color: var(--olive);
+      line-height: 1.40;
+      letter-spacing: 0.3pt;
+      flex: 1;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 5.5mm;
+    }
+
+    .inf-block-title {
+      margin-top: 2.5mm;
+      font-family: var(--serif);
+      font-size: 9.8pt;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 1.5mm;
+      padding-bottom: 0.5mm;
+      border-bottom: 0.3pt dotted var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 2mm;
+    }
+
+    .inf-block-title .small {
+      font-family: var(--serif);
+      font-size: 9pt;
+      color: var(--stone);
+      font-weight: 400;
+      margin-left: 0;
+      letter-spacing: 0.2pt;
+    }
+
+    .art-row {
+      padding: 1.6mm 0;
+      border-bottom: 0.3pt dotted var(--border-soft);
+    }
+
+    .talk-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2mm;
+      padding: 1.6mm 0;
+      border-bottom: 0.3pt dotted var(--border-soft);
+    }
+
+    .art-row:last-of-type,
+    .talk-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .art-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 2mm;
+      padding-right: 3mm;
+    }
+
+    .art-title,
+    .talk-title {
+      font-size: 9pt;
+      color: var(--near-black);
+      font-weight: 500;
+      line-height: 1.40;
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .art-stats,
+    .talk-venue {
+      font-size: 9pt;
+      color: var(--stone);
+      line-height: 1.40;
+      margin-top: 0.5mm;
+      padding-left: 0;
+      letter-spacing: 0.3pt;
+      white-space: nowrap;
+    }
+
+    .art-stats .em-brand {
+      color: var(--brand);
+    }
+
+    .art-date {
+      font-size: 9pt;
+      color: var(--stone);
+      font-variant-numeric: tabular-nums;
+      font-weight: 400;
+    }
+
+    .art-stats .lang-cn,
+    .art-stats .lang-en {
+      display: inline-block;
+      font-size: 9pt;
+      font-weight: 500;
+      margin-right: 0.5mm;
+      letter-spacing: 0.2pt;
+      color: var(--stone);
+    }
+
+    .talk-date {
+      font-size: 9pt;
+      color: var(--stone);
+      font-weight: 500;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      padding-top: 0.3mm;
+    }
+
+    /* SKILLS */
+    .skill-row {
+      display: flex;
+      gap: 2.5mm;
+      padding: 1.7mm 0;
+      border-bottom: 0.3pt dotted var(--border);
+      align-items: baseline;
+    }
+
+    .skill-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .skill-label {
+      font-size: 9pt;
+      font-weight: 500;
+      color: var(--brand);
+      letter-spacing: 0.3pt;
+      width: 22mm;
+      flex-shrink: 0;
+      line-height: 1.36;
+    }
+
+    .skill-body {
+      font-size: 9pt;
+      color: var(--near-black);
+      line-height: 1.40;
+      letter-spacing: 0.3pt;
+      flex: 1;
+    }
+
+    .skill-body .em-brand {
+      color: var(--brand);
+    }
+
+    .no-break {
+      break-inside: avoid;
+    }
+
+    /* EDUCATION */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9.5pt;
+      padding: 1.7mm 0;
+    }
+
+    .edu-row .school {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 10.7pt;
+    }
+
+    .edu-row .major {
+      color: var(--olive);
+      font-size: 9.5pt;
+    }
+
+    .edu-row .date {
+      color: var(--stone);
+      font-variant-numeric: tabular-nums;
+      font-size: 9pt;
+    }
+
+    /* TABLE (kami-table) */
+    table,
+    .kami-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 6pt 0;
+      break-inside: avoid;
+    }
+
+    table th,
+    .kami-table th {
+      text-align: left;
+      font-weight: 500;
+      color: var(--dark-warm);
+      padding: 3pt 6pt;
+      border-bottom: 1pt solid var(--border);
+      background: transparent;
+    }
+
+    table td,
+    .kami-table td {
+      padding: 2pt 6pt;
+      border-bottom: 0.3pt solid var(--border-soft);
+      vertical-align: top;
+    }
+
+    table.compact th,
+    .kami-table.compact th {
+      padding: 2pt 4pt;
+      font-size: 8pt;
+    }
+
+    table.compact td,
+    .kami-table.compact td {
+      padding: 1pt 4pt;
+      font-size: 8pt;
+      line-height: 1.4;
+    }
+
+    table.financial td:not(:first-child),
+    .kami-table.financial td:not(:first-child) {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    table.financial th:not(:first-child),
+    .kami-table.financial th:not(:first-child) {
+      text-align: right;
+    }
+
+    table.striped tbody tr:nth-child(even) td,
+    .kami-table.striped tbody tr:nth-child(even) td {
+      background: var(--ivory);
+    }
+
+    table .total td,
+    .kami-table .total td {
+      font-weight: 500;
+      border-top: 1pt solid var(--brand);
+      border-bottom: none;
+      color: var(--near-black);
+    }
+
+    /* DENSE VARIANT: add class="resume--dense" to <body> when 5+ projects overflow */
+    body.resume--dense {
+      font-size: 9pt;
+    }
+
+    body.resume--dense .proj-text {
+      line-height: 1.38;
+    }
+
+    body.resume--dense .tl-body {
+      font-size: 8.5pt;
+    }
+
+    body.resume--dense .project {
+      padding: 1.6mm 0;
+    }
+
+    body.resume--dense .section-title {
+      margin-top: 4.2mm;
+      margin-bottom: 1.2mm;
+    }
+  </style>
+</head>
+
+<body class="resume--dense">
+
+  <!-- ═══════════ PAGE 1 ═══════════ -->
+
+  <div class="header">
+    <div>
+      <div class="name serif">候选人<span class="alias">工作经验 4 年</span></div>
+    </div>
+    <div class="contact">
+      <span class="role">Web 全栈 / AI Agent 前端</span>
+      <br>
+      <a href="https://github.com/zhiyanzhaijie">GitHub @zhiyanzhaijie</a>
+      <span class="sep">·</span>
+      <a href="https://zhiyanzhaijie.space">zhiyanzhaijie.space</a>
+      <span class="sep">·</span>
+      <span class="loc">Remote / 成都 / 杭州 / 上海 / 深圳</span>
+    </div>
+  </div>
+
+  <!-- 4 个最强的数字标签 -->
+  <div class="metrics">
+    <div class="metric"><span class="metric-value serif">4<span class="unit">年</span></span><span
+        class="metric-label">Web 全栈经验</span></div>
+    <div class="metric"><span class="metric-value serif">4<span class="unit">个</span></span><span
+        class="metric-label">开源项目</span></div>
+    <div class="metric"><span class="metric-value serif">3<span class="unit">种</span></span><span
+        class="metric-label">核心工作语言</span></div>
+    <div class="metric"><span class="metric-value serif">3+<span class="unit">人</span></span><span
+        class="metric-label">转码指南帮助就业</span></div>
+  </div>
+
+  <section>
+    <div class="section-title">个人简介</div>
+    <div class="summary">
+      4 年 Web 全栈经验，最近一段全职经历负责出海 AI 金融产品前端。主栈 <span class="em-brand">TS / Next / React / Angular / Vue</span>，业余使用
+      Rust、Dioxus、Axum、Tauri 开发开源项目。维护有Best Of RS以及Warm系列多个开源项目。
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">工作经历<span class="sub">2022/06 - 2025/12 · 前端负责人 / Web 全栈 / 软件工程师</span></div>
+
+    <!-- Timeline 3 步：长期演进信号 -->
+    <div class="timeline">
+      <div class="tl-step">
+        <div class="tl-top">
+          <div class="tl-year serif">25/03-25/12</div>
+          <div class="tl-head">A公司 AI</div>
+        </div>
+        <div class="tl-body">海外 Agent AI BU 前端负责人，负责 AI 金融垂类产品前端调研、选型与落地。</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-top">
+          <div class="tl-year serif">23/06-25/03</div>
+          <div class="tl-head">B公司</div>
+        </div>
+        <div class="tl-body">CD IT Service Web 全栈，负责 B 端中后台、审计与绩效业务系统全流程实现。</div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-top">
+          <div class="tl-year serif">22/06-23/05</div>
+          <div class="tl-head">C公司</div>
+        </div>
+        <div class="tl-body">参与数字大屏低代码平台与大数据中台，完成低代码画布和交互能力二次开发。</div>
+      </div>
+    </div>
+
+    <!-- 项目模板 - 重复此块 3-5 次 -->
+    <div class="project">
+      <div class="proj-head">
+        <span class="proj-name serif">DeeptrackerAI App</span>
+        <span class="proj-kind">· AI 投资 SaaS 应用</span>
+        <span class="proj-role">前端负责人</span>
+      </div>
+      <div class="proj-lines">
+        <div class="proj-row">
+          <div class="proj-label">角色</div>
+          <div class="proj-text">金融垂类 AI 投资 SaaS 的 app 应用，负责前端方案调研、Next.js 选型和功能落地。</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">动作</div>
+          <div class="proj-text">从0-1使用 Next.js 构建 SSR 应用。完整支持AI对话，投资追踪策略，追踪结果反馈，鉴权支付，使用引导等功能</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">结果</div>
+          <div class="proj-text"><span class="hl">2 个月内</span>完成 SSR 应用开发方式上手与核心功能交付，线上入口为 app.deeptracker.ai(已关停)。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <span class="proj-name serif">DeeptrackerAI CMS</span>
+        <span class="proj-kind">· PayloadCMS / 运营系统</span>
+        <span class="proj-role">前端负责人</span>
+      </div>
+      <div class="proj-lines">
+        <div class="proj-row">
+          <div class="proj-label">角色</div>
+          <div class="proj-text">DeeptrackerAI 的 CMS 与官网内容管理部分，负责 PayloadCMS 方案调研、接入和前端落地。</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">动作</div>
+          <div class="proj-text">处理 PayloadCMS 搭建，包括Block/Fields积木式ui开发, SSR处理，跨应用session/GA4共享。过程中通过 GitHub、Discord
+            跟进框架和插件问题。</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">结果</div>
+          <div class="proj-text">在 PayloadCMS 下完成 SEO 与运营分析配置；相比其余组wordpressCMS方式，开发提效近3倍</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <span class="proj-name serif">B公司审计事务执行中台</span>
+        <span class="proj-kind">· ToB 核心审计业务中台</span>
+        <span class="proj-role">业务线 Owner</span>
+      </div>
+      <div class="proj-lines">
+        <div class="proj-row">
+          <div class="proj-label">角色</div>
+          <div class="proj-text">B公司内部 ToB 中台，支撑核心审计业务；包含任务派发、人力记录、中期数据跟踪、邮件生成、填表导表等模块，负责 <span class="hl">3
+              条业务线</span>全流程实现。</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">动作</div>
+          <div class="proj-text">后端搭建 .NET Core MVC 基建并编写业务类、工具类；前端完成 Angular 模块分层、复杂组件封装、动态表单与工作流界面。</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">结果</div>
+          <div class="proj-text">工作流实现中使用构建者、策略、模板等模式；动态表单采用配置表 + UI 组件方案；通过自定义渲染策略与虚拟列表将复杂表格渲染从 <span
+              class="hl">1s+</span> 优化到约 <span class="hl">100ms</span>。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">更多项目经验<span class="sub">B公司 / C公司 · 补充项目缩略</span></div>
+    <div class="convictions">
+      <div class="conv-card">
+        <div class="conv-head"><span class="year">B公司</span>审核协同文档</div>
+        <div class="conv-body">
+          负责 React 协同表格核心组件与功能类封装，覆盖布局自定义、行列拖拽、单元格细粒度权限与数据同步；使用 diff-patch 处理协同编辑一致性。
+        </div>
+      </div>
+      <div class="conv-card">
+        <div class="conv-head"><span class="year">B公司</span>绩效管理后台</div>
+        <div class="conv-body">
+          次年项目 Owner，负责绩效、权限、配置分区、日志、导表模块；针对 5-7 种 Role 与 3 层表单项权限，结合 <span class="hl">位掩码 + 前端路由</span> 降低实现复杂度。
+        </div>
+      </div>
+      <div class="conv-card">
+        <div class="conv-head"><span class="year">C公司</span>数据大屏低代码平台</div>
+        <div class="conv-body">
+          二次开发采购三方库源码，重构画布元素低代码底层逻辑，从 JSON 方案转向 JS，并修正图层管理、快捷键、操作历史等能力。
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════ PAGE 2 ═══════════ -->
+
+  <section class="page-break">
+    <div class="section-title">开源项目<span class="sub"> Warming / Warmmy / Best Of RS </span>
+    </div>
+
+    <div class="os-intro">
+      <span class="hl">个人开源项目主要围绕 Rust 生态应用</span>。Warmmy 是 Dioxus 多端应用；Best Of RS 是 Rust 生态项目追踪站；此外给
+      前沿库Dioxus的贡献者，曾维护 Simple Code Guide 文档项目。
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <span class="proj-name serif"><a href="https://zhiyanzhaijie.github.io/warmmo">Warmmo 屋墨</a></span>
+        <span class="proj-kind">· 画布AI创作web应用</span>
+        <span class="proj-role">独立开发</span>
+      </div>
+      <div class="proj-lines">
+        <div class="proj-row">
+          <div class="proj-label">定位</div>
+          <div class="proj-text">Web端本地化的文本类Agent创作工具</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">实现</div>
+          <div class="proj-text">Go Agent, react的web应用。WebUI挂靠github，core提供release用户侧运行</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">状态</div>
+          <div class="proj-text">Web端在线, 当前版本支持流程画布，agent协同，作品管理等功能</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="project">
+      <div class="proj-head">
+        <span class="proj-name serif"><a href="https://github.com/zhiyanzhaijie/warming-no-rs">Warming 屋鸣</a></span>
+        <span class="proj-kind">· 钢琴练习软件</span>
+        <span class="proj-role">独立开发</span>
+      </div>
+      <div class="proj-lines">
+        <div class="proj-row">
+          <div class="proj-label">定位</div>
+          <div class="proj-text">Agent协作钢琴练习工具类应用</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">实现</div>
+          <div class="proj-text">tauri, python Agent, react的桌面应用</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">状态</div>
+          <div class="proj-text">Tauri构建可用Windows/Mac/Linux桌面版本</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="project">
+      <div class="proj-head">
+        <span class="proj-name serif"><a href="https://github.com/zhiyanzhaijie/warmmy">Warmmy 屋米</a></span>
+        <span class="proj-kind">· Rust 多端 Agentic 饮食助手</span>
+        <span class="proj-role">独立开发</span>
+      </div>
+      <div class="proj-lines">
+        <div class="proj-row">
+          <div class="proj-label">定位</div>
+          <div class="proj-text">Rust 生态构建的 Agentic 饮食助手，支持 <span class="hl">Windows / macOS / iOS / Android /
+              Web</span>，功能包括饮食记录、推荐评分、偏好记忆和食物旅程。</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">实现</div>
+          <div class="proj-text">使用 Dioxus 落地 DDD + hexagonal结构， 搭建AI友好的上下文开发基建，高度抽象逻辑（IO， ui, DDD用例）, 各平台，各分层清晰实现，解耦完好
+          </div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">状态</div>
+          <div class="proj-text">项目实现了RAG记忆陪伴对话流和多端 UI；当前按开源非商业许可发布。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="proj-head">
+        <span class="proj-name serif"><a href="https://bestofrs.org">Best Of RS</a></span>
+        <span class="proj-kind">· Rust 生态趋势追踪站</span>
+        <span class="proj-role">独立开发</span>
+      </div>
+      <div class="proj-lines">
+        <div class="proj-row">
+          <div class="proj-label">定位</div>
+          <div class="proj-text">受 Best of JS 启发，面向 Rust 生态的开源项目发现、比较与趋势追踪工具，展示活跃、上升和稳定项目。</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">实现</div>
+          <div class="proj-text">基于 curated project list、daily tracking pipeline 与 trend-focused UI 构建，关注 GitHub 项目
+            metadata、community health 与 daily / weekly / monthly / yearly 趋势窗口。</div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-label">状态</div>
+          <div class="proj-text">包含 domain / app / adapters / infra / ui / worker, 我的首个DDD Rust落地项目,
+            获得Dioxus框架Owner的Star。项目 README
+            中提供架构图与贡献说明。
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="os-grid">
+      <div class="os-item">
+        <span class="os-name serif"><a href="https://github.com/DioxusLabs/dioxus">Dioxus</a></span>
+        <span class="os-desc">重构 Dioxus/components 底层支持，使得官方组件库跟进js生态主流开发体验。核心代码当前影响到几乎每个组件。</span>
+        <span class="os-star">Contributor</span>
+      </div>
+      <div class="os-item">
+        <span class="os-name serif"><a href="https://zhiyanzhaijie.github.io/SimpleCodeGuide">Simple Code
+            Guide</a></span>
+        <span class="os-desc">转码指南文档项目，配套 Bilibili 课程，已帮助 3 人就业</span>
+        <span class="os-star">Docs</span>
+      </div>
+    </div>
+
+    <div class="os-highlight">
+      <span class="tag">Rustacean</span>Rust 方向实践集中在GUI，长期活跃在Dioxus社区，热衷于推进前端合理绣化。针对流行应用维护了warmmy屋米，bestofrs作为绣化最佳实践。
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">核心能力</div>
+    <!-- 5 项固定结构，每项至少 1 处橙色高亮 -->
+    <div class="skill-row">
+      <div class="skill-label">前端<br>工程</div>
+      <div class="skill-body">经历覆盖 <span class="em-brand">Next / React / Angular / Vue</span>，具备出海C端ai应用和B端中后台工程能力。
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">全栈<br>交付</div>
+      <div class="skill-body">熟悉 <span class="em-brand">Rust, .NET Core</span> MVC, DDD基建和常见生态，能够完成从领域建模到用户层的全程交互。</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Rust<br>前沿</div>
+      <div class="skill-body">Rustacean，实践 <span class="em-brand">Axum / Dioxus / Tauri</span>，主要项目包括 Warmmy 与 Best
+        Of RS。</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">AI<br>乐观</div>
+      <div class="skill-body">始终相信软件工程为人留有首要的工程空间，当前LLM在工程中扮演的是 <span class="em-brand">实现层</span>角色而非<span
+          class="em-brand">抽象层</span></div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">学习<br>协作</div>
+      <div class="skill-body">英语 CET-6，可阅读英文技术文章，习惯通过 <span class="em-brand">LLM + Blog + Discord / GitHub</span>
+        处理新技术调研与社区问题。</div>
+    </div>
+  </section>
+
+  <section class="no-break">
+    <div class="section-title">教育背景</div>
+    <div class="edu-row">
+      <div>
+        <span class="school serif">华南农业大学（双一流）</span>
+        <span class="major">　· 工学 · 建筑学</span>
+      </div>
+      <div class="date">2017/09 - 2022/06</div>
+    </div>
+  </section>
+
+</body>
+
+</html>
